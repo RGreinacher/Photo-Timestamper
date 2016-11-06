@@ -1,7 +1,8 @@
+#/usr/bin/env ruby
+
 require 'awesome_print'
 require 'mini_exiftool'
 require 'digest/md5'
-require 'Date'
 
 # change this folder paths
 @source_path = '/absolute/path/to/a/folder/containing/images'

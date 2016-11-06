@@ -1,6 +1,6 @@
 # Photo Timestamper
 
-Read a photo's creation timestamp and prefix it's filename. Sort photos without a viewer tool. Additionally it removes duplicates and adds a camera ID to the filename. This makes you able to search for Photos from a specific camera in a mixed folder.
+Read a photo's creation timestamp and prefix its filename. Sort photos without a viewer tool. Additionally it removes duplicates and adds a camera ID to the filename. This makes you able to search for Photos from a specific camera in a mixed folder.
 
 ## Use case
 
@@ -9,9 +9,22 @@ Read a photo's creation timestamp and prefix it's filename. Sort photos without 
 
 ## Use
 
+It may be necessary to install some prerequirements.
+On Ubuntu run
+
+```bash
+sudo apt-get -y install exiftool
+```
+
+After that setup your bundle by running
+
+```bash
+bundle install
+```
+
 Open the `photo_timestamper.rb` file and change line 7 & 8:
 
-```
+```ruby
 	@source_path = '/absolute/path/to/a/folder/containing/images'
 	@target_path = '/absolute/path/to/output'
 ```
@@ -19,7 +32,7 @@ Open the `photo_timestamper.rb` file and change line 7 & 8:
 Then run the script:
 
 ```
-ruby photo_timestamper.rb
+bundle exec ruby photo_timestamper.rb
 ```
 
 The script won't change the original files. Instead, it will copy all the images to `@target_path`.
